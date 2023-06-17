@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auth express mongo && jwt</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav>
+    <h1><a href="/">Authentication Jwt</a></h1>
+    <ul>
+      <% if (user) { %>
+        <li>Bienvenu(e), <%= user.email %> </li>
+      <li><a href="/logout">Deconnexion</a></li>
+      <% } else {%>
+      <li><a href="/login">Connexion</a></li>
+      <li><a href="/signup" class="btn">Inscription</a></li>
+      <%} %>
+    </ul>
+  </nav>
